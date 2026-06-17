@@ -31,10 +31,11 @@ public class Principal{
                     boolean clima = boolean.parseBoolean(dados[7]);
 
                     treinoDaLinha = new TreinoFutebol(tempo, pos, gols, clima);
-                }
-                else if(tipoEsporte.equals("Basquete")){
-                    
-                    
+                } else if(tipoEsporte.equals("BASQUETE")){
+                   double tempo = double.parseDouble(dados[4]);
+                   PosBasquete pos = posBasquete.valueOf(dados[5]);
+                   int rebotes = Integer.parseInt(dados[6]);
+                   boolean clima = boolean.parseBoolean(dados[8]);
                 }
                     
             }
