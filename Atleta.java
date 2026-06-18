@@ -38,7 +38,7 @@ public class Atleta{
             this.energia = limiteEnergia;
             System.out.println("Você já está com a energia cheia, o sono extra foi computado. ");
         }else{
-            System.out.println(this.nome + " recuperou " + energiaRecuperada + "de energia. \n Energia atual: " + this.energia);
+            System.out.println(this.nome + " recuperou " + energiaRecuperada + " de energia. \n Energia atual: " + this.energia);
         }
     }
     
