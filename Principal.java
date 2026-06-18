@@ -47,10 +47,10 @@ public class Principal{
                    treinoDaLinha = new TreinoCorrida(distanciaKm, pace);
                    
                 }else if(tipoEsporte.equals("VÔLEI")){
-                   String placar = String.valueOf(dados[4]);
+                   int sets = Integer.parseInt(dados[4]);
                    PosVolei pos = PosVolei.valueOf(dados[5]);
                    
-                   treinoDaLinha = new TreinoVolei(placar, pos);
+                   treinoDaLinha = new TreinoVolei(sets, pos);
                    
                 }else if(tipoEsporte.equals("HANDEBOL")){
                    double tempoJogo = Double.parseDouble(dados[4]);
