@@ -9,3 +9,4 @@ public enum TerrenoCorrida{
   TerrenoCorrida(double dificuldade){this.dificuldade = dificuldade;}
 
   public double getDificuldade(){return this.dificuldade;}
+}
