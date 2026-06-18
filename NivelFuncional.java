@@ -9,3 +9,4 @@ public enum NivelFuncional{
   NivelFuncional(double gastoBase){this.gastoBase = gastoBase;}
 
   public double getGastoBase(){return this.gastoBase;}
+}
