@@ -5,14 +5,14 @@ public class TreinoAtletismo implements Treinamento{
     private TerrenoCorrida terreno;
     private boolean climaQuente;
 
-    TreinoAtletismo(double distanciaKm, double tempoMinuto, TerrenoCorrida terreno, boolean climaQuente){
+    public TreinoAtletismo(double distanciaKm, double tempoMinuto, TerrenoCorrida terreno, boolean climaQuente){
         this.distanciaKm = distanciaKm;
         this.tempoMinuto = tempoMinuto;
         this.terreno = terreno;
-        this.climaQuente = climaQuente;]
+        this.climaQuente = climaQuente;
     }
     @Override
-    public int calcularGato(Corpo corpo){
+    public int calcularGasto(Corpo corpo){
         double pace = this.tempoMinuto/this.distanciaKm;
 
         double gastoPace = 1.0;
@@ -24,7 +24,7 @@ public class TreinoAtletismo implements Treinamento{
             gastoPace = 0.9;
         }
 
-        double custo = (this.distancia * 15) * this.terreno.getDificuldade() * fatorPace;
+        double custo = (this.distanciaKm * 15) * this.terreno.getDificuldade() * gastoPace;
         if(this.climaQuente){
             custo *= 1.25;
         }
