@@ -2,12 +2,12 @@
 public class TreinoFuncional implements Treinamento{
     private double tempoTreino;
     private NivelFuncional nivel;
-    private boolean usaPesos
+    private boolean usaPesos;
     
     public TreinoFuncional (double tempoTreino, NivelFuncional nivel, boolean usaPesos){
         this.tempoTreino = tempoTreino;
         this.nivel = nivel;
-        this.usaPesos = usaPeesos;
+        this.usaPesos = usaPesos;
     }
     @Override
     public int calcularGasto(Corpo corpo){
