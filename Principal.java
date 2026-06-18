@@ -104,7 +104,7 @@ public class Principal{
    
       String textoLimpo = texto.trim().toUpperCase();
 
-      if(textoLimpo.equals("SIM")|| textoLimpo.equals("S") || textoLimpo.equals("TRUE")){return true;}
+      if(textoLimpo.equals("SIM")|| textoLimpo.equals("S") || textoLimpo.equals("TRUE") || textoLimpo.equals("SI")||textoLimpo.equals("SS")){return true;}
 
       return false;
    }
