@@ -1,32 +1,20 @@
 
-/**
- * Escreva uma descrição da classe TreinoFuncional aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
 public class TreinoFuncional implements Treinamento{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
-
-    /**
-     * Construtor para objetos da classe TreinoFuncional
-     */
-    public TreinoFuncional()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+    private double tempoTreino;
+    private NivelFuncional nivel;
+    private boolean usaPesos
+    
+    public TreinoFuncional (double tempoTreino, NivelFuncional nivel, boolean usaPesos){
+        this.tempoTreino = tempoTreino;
+        this.nivel = nivel;
+        this.usaPesos = usaPeesos;
     }
-
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+    @Override
+    public int calcularGasto(Corpo corpo){
+        double custo = this.tempoTreino * 1.5 * this.nivel.getGastoBase();
+        if(this.usaPesos){
+            custo *= 1.2;
+        }
+        return (int) (custo * corpo.getMultiplicadorGasto());
     }
 }
