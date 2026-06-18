@@ -1,17 +1,18 @@
 
 public class TreinoVolei implements Treinamento
 {
-    private String placar;
+    private int quantidadeSets;
     private PosVolei posicao;
     
-    public TreinoVolei(String placar, PosVolei posicao){
-        this.placar = placar;
+    public TreinoVolei(int quantidadeSets, PosVolei posicao){
+        this.quantidadeSets = quantidadeSets;
         this.posicao = posicao;
     }
-    
+
+    @Override
     public int calcularGasto(Corpo corpo){
-        double custo = this.posicao.getGastoEnergiaPosicao() * corpo.getMultiplicadorGasto();
-        return (int) custo;
+        double custoBruto = this.posicao.getGastoEnergiaPosicao() * this.quantidadeSets;
+        return (int) (custoBruto * corpo.getMultiplicadorGasto());
     }
     
 }
