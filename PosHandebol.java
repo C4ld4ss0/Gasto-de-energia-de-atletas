@@ -7,7 +7,7 @@ public enum PosHandebol{
   CENTRAL(1.4),
   PIVO(1.6);
   
-  Private double gastoPorMinuto;
+  private double gastoPorMinuto;
 
   PosHandebol(double gastoPorMinuto){
     this.gastoPorMinuto = gastoPorMinuto;
