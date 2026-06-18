@@ -1,33 +1,33 @@
 
-/**
- * Escreva uma descrição da classe TreinoAtletismo aqui.
- * 
- * @author (seu nome) 
- * @version (um número da versão ou uma data)
- */
-public class TreinoAtletismo implements Treinamento
-{
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+public class TreinoAtletismo implements Treinamento{
+    private double distanciaKm;
+    private double tempoMinuto;
+    private TerrenoCorrida terreno;
+    private boolean climaQuente;
 
-    /**
-     * Construtor para objetos da classe TreinoAtletismo
-     */
-    public TreinoAtletismo()
-    {
-        // inicializa variáveis de instância
-        x = 0;
+    TreinoAtletismo(double distanciaKm, double tempoMinuto, TerrenoCorrida terreno, boolean climaQuente){
+        this.distanciaKm = distanciaKm;
+        this.tempoMinuto = tempoMinuto;
+        this.terreno = terreno;
+        this.climaQuente = climaQuente;]
     }
+    @Override
+    public int calcularGato(Corpo corpo){
+        double pace = this.tempoMinuto/this.distanciaKm;
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
-    {
-        // escreva seu código aqui
-        return x + y;
+        double gastoPace = 1.0;
+        if(pace <= 4.5){
+            gastoPace = 1.5;
+        }else if(pace > 4.5 && pace <= 6.0){
+            gastoPace = 1.2;
+        }else{
+            gastoPace = 0.9;
+        }
+
+        double custo = (this.distancia * 15) * this.terreno.getDificuldade() * fatorPace;
+        if(this.climaQuente){
+            custo *= 1.25;
+        }
+        return (int) (custo * corpo.getMultiplicadorGasto());
     }
 }
