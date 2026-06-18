@@ -97,6 +97,7 @@ public class Principal{
              catch (FileNotFoundException e){
             System.out.println("Opa! Arquivo não encontrado: " + caminhoArquivo);
         }
+    }
 
    public static boolean converterParaBoolean(String texto){
       if (texto == null){return false;}
