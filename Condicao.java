@@ -1,6 +1,6 @@
 
 public enum Condicao{
-    DESCANCADO(true, 0.25), 
+    DESCANSADO(true, 0.25), 
     NORMAL(true, 0.0), 
     CANSADO(true, -0.2), 
     DOLORIDO(false, 0.0),
