@@ -1,18 +1,18 @@
 
 public enum PosVolei
 {
-    PONTEIRO(30),
-    OPOSTO(30),
-    LIBERO(15),
-    CENTRAL(20),
-    LEVANTADOR(35);
+    PONTEIRO(22.0),
+    OPOSTO(25.0),
+    LIBERO(20.0),
+    CENTRAL(25.0),
+    LEVANTADOR(30.0);
     
-    private int gastoEnergiaPosicao;
+    private double gastoEnergiaPosicao;
     
-    PosVolei(int gasto){
+    PosVolei(double gasto){
         this.gastoEnergiaPosicao = gasto;
     }
-    public int getGastoEnergiaPosicao(){
+    public double getGastoEnergiaPosicao(){
         return this.gastoEnergiaPosicao;
     }
     
